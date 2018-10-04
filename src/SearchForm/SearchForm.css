@@ -1,0 +1,48 @@
+.search-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 400px;
+  margin: 120px auto;
+  align-items: center;
+}
+
+.search-form-header {
+  font-size: 28pt;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+.search-form-input {
+  width: 60%;
+  margin: 5px auto;
+  height: 25px;
+  font-size: 16pt;
+  border-radius: 5px;
+  border: solid 2px #2cc4b7;
+  box-shadow: 0 0 2px #2cc4b7;
+  padding: 2px 15px;
+}
+
+.search-form-button {
+  background-color: #2cc4b7;
+  height: 40px;
+  color: #ffffff;
+  font-size: 12pt;
+  font-family: 'Nunito', sans-serif;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form-button:focus, .search-form-input:focus {
+  outline-color: #2cc4b7;
+  border-radius: 5px;
+}
+
+.search-form {
+  display: flex;
+  width: 70%;
+}
