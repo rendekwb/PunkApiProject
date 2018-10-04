@@ -1,18 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Navigation from './Navigation/Navigation';
+import Footer from './Footer/Footer';
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-
-    }
   }
 
   render() {
     return (
-      <div>Main</div>
+      <div>
+        <Navigation/>
+        <Footer/>
+      </div>
     )
   }
 }

@@ -1,0 +1,17 @@
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 75px;
+  background-color: #2cc4b7;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar-title {
+  color: #ffffff;
+  margin: 0 20px;
+  font-size: 28pt;
+  font-family: 'Nunito', sans-serif;
+}
