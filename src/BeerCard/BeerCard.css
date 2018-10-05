@@ -1,0 +1,29 @@
+.beer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  width: 200px;
+  border: 0.5px solid #777777;
+  border-radius: 5px;
+  box-shadow: 0 0 2px;
+  margin: 10px;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.1s ease-in-out;
+  padding: 20px;
+}
+
+.beer-card:hover {
+  transform: scale(1.01);
+}
+
+.beer-card-name {
+  margin: 5px;
+  text-align: center;
+  font-size: 14pt;
+}
+
+.beer-card-image {
+  height: 180px;
+  width: auto;
+}
