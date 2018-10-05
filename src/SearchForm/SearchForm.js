@@ -16,23 +16,16 @@ class SearchForm extends React.Component {
   searchBeer() {
     axios
     .get("https://api.punkapi.com/v2/beers?per_page=10")
-      .then(response =>
-        response.data.map(beer => ({
-          name: beer.name,
-          img: beer.image_url
-        }))
-      )
-      .then(beers => {
-        this.setState({
-          beers
-        });
+      .then(response => {
+        const beers = response.data;
+        this.setState({ beers });
       })
-      .catch(error => console.log(error));
+    .catch(error => console.log(error));
   }
 
   render() {
     const listItems = this.state.beers.map((beer, index) =>
-      <BeerCard key={index} name={beer.name} img={beer.img}/>);
+      <BeerCard key={index} beer={beer}/>);
 
     return (
         <div>
