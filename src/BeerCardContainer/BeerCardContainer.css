@@ -1,0 +1,11 @@
+.beer-card-container {
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0px 10px;
+  margin-bottom: 120px; 
+  box-sizing: border-box;
+}

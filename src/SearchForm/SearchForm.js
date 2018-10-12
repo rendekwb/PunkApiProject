@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import axios from 'axios'
-import BeerCard from '../BeerCard/BeerCard'
+import BeerCardContainer from '../BeerCardContainer/BeerCardContainer'
 import './SearchForm.css'
 
 class SearchForm extends React.Component {
@@ -24,9 +24,6 @@ class SearchForm extends React.Component {
   }
 
   render() {
-    const listItems = this.state.beers.map((beer, index) =>
-      <BeerCard key={index} beer={beer}/>);
-
     return (
         <div>
           <div className="search-form-container">
@@ -37,12 +34,8 @@ class SearchForm extends React.Component {
               <input className="search-form-input" type="text"/>
               <button className="search-form-button" onClick={this.searchBeer}>Search</button>
             </div>
-            <div>
-              <ul>
-                {listItems}
-              </ul>
-            </div>
           </div>
+          <BeerCardContainer beers={this.state.beers} />
         </div>
     )
   }
