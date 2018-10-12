@@ -13,7 +13,7 @@ class BeerCardContainer extends React.Component {
 
   render() {
     const listItems = this.props.beers.map((beer, index) =>
-      <BeerCard key={index} beer={beer}/>);
+      <BeerCard key={index} beer={beer} onClick={this.showModal}/>);
 
     return (
       <div>
