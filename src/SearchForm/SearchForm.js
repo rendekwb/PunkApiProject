@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import axios from 'axios'
 import BeerCardContainer from '../BeerCardContainer/BeerCardContainer'
+import Alert from "../Alert/Alert";
 import './SearchForm.css'
 
 class SearchForm extends React.Component {
@@ -9,7 +10,11 @@ class SearchForm extends React.Component {
     super(props);
     this.state = {
       beers: [],
-      searchString: ''
+      searchString: '',
+      alertObj: {
+        show: false,
+        message: ""
+      }
     }
     this.searchBeer = this.searchBeer.bind(this);
     this.updateSearchString = this.updateSearchString.bind(this);
@@ -17,11 +22,9 @@ class SearchForm extends React.Component {
 
   updateSearchString(event) {
     this.setState({
-      beers: this.state.beers,
       searchString: event.target.value
     });
 
-    console.log(this.state.searchString);
   }
 
   searchBeer() {
@@ -37,14 +40,21 @@ class SearchForm extends React.Component {
         })
       .catch(error => console.log(error));
     } else {
-      alert("Please enter a beer name to search");
+      this.setState({
+        alertObj: {
+          show: true,
+          message: "Whoops, please enter some info before searching"
+        }
+      })
     }
   }
 
   render() {
+    var classes = [];
     return (
         <div>
           <div className="search-form-container">
+            <Alert message={this.state.alertObj.message} classes={classes} />
             <div className="search-form-header">
               Search Here
             </div>
