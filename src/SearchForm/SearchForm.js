@@ -22,7 +22,12 @@ class SearchForm extends React.Component {
 
   updateSearchString(event) {
     this.setState({
-      searchString: event.target.value
+      searchString: event.target.value,
+      alertObj: {
+        show: false,
+        message: "",
+        type: ""
+      }
     });
 
   }
@@ -41,20 +46,27 @@ class SearchForm extends React.Component {
       .catch(error => console.log(error));
     } else {
       this.setState({
+        beers: this.state.beers,
+        searchString: this.state.searchString,
         alertObj: {
           show: true,
-          message: "Whoops, please enter some info before searching"
+          message: "Whoops, please enter some info before searching",
+          type: "alert-warning"
         }
       })
     }
   }
 
   render() {
-    var classes = [];
+    var alertClasses = ["alert"];
+    if(this.state.alertObj.show) {
+      alertClasses.push("alert-show");
+      alertClasses.push(this.state.alertObj.type);
+    }
     return (
         <div>
           <div className="search-form-container">
-            <Alert message={this.state.alertObj.message} classes={classes} />
+            <Alert message={this.state.alertObj.message} classes={alertClasses} />
             <div className="search-form-header">
               Search Here
             </div>

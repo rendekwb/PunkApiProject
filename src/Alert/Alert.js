@@ -9,8 +9,14 @@ class Alert extends React.Component {
   }
 
   render() {
+
+    var classesStr = "";
+    for(var item of this.props.classes) {
+      classesStr += (item + " ")
+    }
+
     return (
-      <div className="alert">
+      <div className={classesStr}>
         <p>{this.props.message}</p>
       </div>
     )
