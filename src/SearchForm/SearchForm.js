@@ -66,12 +66,28 @@ class SearchForm extends React.Component {
         <div>
           <div className="search-form-container">
             <Alert message={this.state.alertObj.message} classes={alertClasses} />
-            <div className="search-form-header">
-              Search Here
-            </div>
             <div className="search-form">
               <input className="search-form-input" type="text" onChange={this.updateSearchString}/>
               <button className="search-form-button" onClick={this.searchBeer}>Search</button>
+            </div>
+            <div className="search-by-option-container">
+              <span className="search-options-header">Search By:</span>
+              <div>
+                <label>Name</label>
+                <input type="radio" name="search-option" value="name"/>
+              </div>
+              <div>
+                <label>ABV</label>
+                <input type="radio" name="search-option" value="abv"/>
+              </div>
+              <div>
+                <label>IBU</label>
+                <input type="radio" name="search-option" value="ibu"/>
+              </div>
+              <div>
+                <label>Brew Date</label>
+                <input type="radio" name="search-option" value="brew-date"/>
+              </div>
             </div>
           </div>
           <BeerCardContainer beers={this.state.beers} />

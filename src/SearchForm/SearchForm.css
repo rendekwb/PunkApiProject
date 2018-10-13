@@ -6,13 +6,6 @@
   align-items: center;
 }
 
-.search-form-header {
-  font-size: 28pt;
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
-  width: 100%;
-}
-
 .search-form-input {
   width: 60%;
   margin: 5px auto;
@@ -44,4 +37,26 @@
 .search-form {
   display: flex;
   width: 70%;
+}
+
+.search-by-option-container {
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.search-options-header {
+  font-size: 18pt;
+}
+
+.search-by-option-container > * {
+  margin: 0px 20px;
+}
+
+.search-by-option-container label {
+  margin-right: 5px;
 }

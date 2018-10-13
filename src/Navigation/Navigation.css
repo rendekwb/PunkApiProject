@@ -15,3 +15,12 @@
   font-size: 28pt;
   font-family: 'Nunito', sans-serif;
 }
+
+@media(max-width: 700px) {
+  .nav-bar {
+    justify-content: center;
+  }
+  .nav-bar-title {
+    font-size: 18pt;
+  }
+}
