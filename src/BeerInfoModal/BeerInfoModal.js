@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './BeerInfoModal.css'
 
 class BeerInfoModal extends React.Component {

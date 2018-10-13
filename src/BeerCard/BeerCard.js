@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './BeerCard.css'
 
 class BeerCard extends React.Component {
